@@ -61,5 +61,6 @@ Generating reports view to 'c:\work\git\serenity-projects\jbeh...
 ```
 
 Observations:
+
 1. With two threads there is no `afterStory` notification for `AfterStories`. This leads to Serenity reports not being generated (https://github.com/serenity-bdd/serenity-jbehave/issues/89)
-1. In multithreaded mode, `beforeStory` is issued after the story is actually performed.
+2. In multithreaded mode, `beforeStory` is issued after the story is actually performed.
