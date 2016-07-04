@@ -80,27 +80,34 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- this does now work for some reason 
-			<plugin>
-				<groupId>com.github.webdriverextensions</groupId>
-				<artifactId>webdriverextensions-maven-plugin</artifactId>
-				<version>2.2.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>install-drivers</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<drivers>
-						<driver>
-							<name>chromedriver</name>
-						</driver>
-					</drivers>
-				</configuration>
-			</plugin>
-			-->
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>webdriverExtensions</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.github.webdriverextensions</groupId>
+						<artifactId>webdriverextensions-maven-plugin</artifactId>
+						<version>2.2.0</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>install-drivers</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<drivers>
+								<driver>
+									<name>chromedriver</name>
+								</driver>
+							</drivers>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
