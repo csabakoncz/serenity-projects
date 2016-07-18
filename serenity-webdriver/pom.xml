@@ -90,7 +90,7 @@
 					<plugin>
 						<groupId>com.github.webdriverextensions</groupId>
 						<artifactId>webdriverextensions-maven-plugin</artifactId>
-						<version>3.0.1</version>
+						<version>3.0.2</version>
 						<executions>
 							<execution>
 								<goals>
@@ -102,6 +102,7 @@
 							<drivers>
 								<driver>
 									<name>chromedriver</name>
+									<version>2.22</version>
 								</driver>
 							</drivers>
 						</configuration>
